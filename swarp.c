@@ -21,7 +21,7 @@ main(int argc, char **argv) {
 		goto Usage;
 	if(!(dpy = XOpenDisplay(0))) {
 		fputs("swarp: cannot open display\n", stderr);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	if((sscanf(argv[1], "%d", &x) != 1) || (sscanf(argv[2], "%d", &y) != 1)) {
 Usage:
